@@ -9,38 +9,36 @@
   <meta property="og:description" content="简约唯美的个人摄影作品集，涵盖心情、风景、旅行与夜景。">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#1A1A1A">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
 
   <!-- 导航 -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">孤雪<span>摄影</span></a>
-      <nav class="nav__links">
+      <a href="index.html" class="nav__logo">孤雪<span>摄影</span><small>GUXUE PHOTOGRAPHY</small></a>
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
         <a href="#home">首页</a>
         <a href="gallery.html">作品</a>
         <a href="#about">关于</a>
         <a href="#contact">联系</a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="菜单">☰</button>
+      <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-controls="navLinks" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <!-- 首屏轮播（图片放 images/hero/1.jpg ~ 4.jpg） -->
   <section class="hero" id="home">
     <div class="hero__slides" id="heroSlides">
-      <div class="hero__slide is-active"><img src="images/hero/1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-hero1/1920/1080'" alt="孤雪摄影作品"></div>
-      <div class="hero__slide"><img src="images/hero/2.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-hero2/1920/1080'" alt="孤雪摄影作品"></div>
-      <div class="hero__slide"><img src="images/hero/3.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-hero3/1920/1080'" alt="孤雪摄影作品"></div>
-      <div class="hero__slide"><img src="images/hero/4.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-hero4/1920/1080'" alt="孤雪摄影作品"></div>
+      <div class="hero__slide is-active"><img src="images/hero/1.jpg" alt="孤雪摄影作品"></div>
+      <div class="hero__slide"><img src="images/hero/2.jpg" alt="孤雪摄影作品"></div>
+      <div class="hero__slide"><img src="images/hero/3.jpg" alt="孤雪摄影作品"></div>
+      <div class="hero__slide"><img src="images/hero/4.jpg" alt="孤雪摄影作品"></div>
     </div>
     <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="上一张">‹</button>
     <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="下一张">›</button>
     <div class="hero__dots" id="heroDots"></div>
+    <button class="hero-pause" id="heroPause" aria-pressed="false">暂停轮播 Ⅱ</button>
     <div class="hero__title">
       <h1>孤雪摄影</h1>
       <p class="hero__sub">Guxue Photography · 用光影记录静好</p>
@@ -58,7 +56,7 @@
     </div>
   </section>
 
-  <!-- 分类预览（图片放 images/cats/mood.jpg 等） -->
+  <!-- 分类预览（图片放 images/thumbs/mood/1.webp 等） -->
   <section class="section section--alt">
     <div class="container">
       <div class="section__head reveal">
@@ -68,30 +66,30 @@
       </div>
       <div class="cats reveal">
         <a class="cat-card" href="gallery.html?cat=mood">
-          <img src="images/cats/mood.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-cat-mood/600/800'" alt="心情" loading="lazy">
+          <img src="images/thumbs/mood/1.webp" alt="心情" loading="lazy">
           <div class="cat-card__label"><div class="zh">心情</div><div class="en">Mood</div></div>
         </a>
         <a class="cat-card" href="gallery.html?cat=landscape">
-          <img src="images/cats/landscape.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-cat-landscape/600/800'" alt="风景" loading="lazy">
+          <img src="images/thumbs/landscape/1.webp" alt="风景" loading="lazy">
           <div class="cat-card__label"><div class="zh">风景</div><div class="en">Landscape</div></div>
         </a>
         <a class="cat-card" href="gallery.html?cat=travel">
-          <img src="images/cats/travel.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-cat-travel/600/800'" alt="旅行" loading="lazy">
+          <img src="images/thumbs/travel/1.webp" alt="旅行" loading="lazy">
           <div class="cat-card__label"><div class="zh">旅行</div><div class="en">Travel</div></div>
         </a>
         <a class="cat-card" href="gallery.html?cat=night">
-          <img src="images/cats/night.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-cat-night/600/800'" alt="夜景" loading="lazy">
+          <img src="images/thumbs/night/1.webp" alt="夜景" loading="lazy">
           <div class="cat-card__label"><div class="zh">夜景</div><div class="en">Night</div></div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 关于（图片放 images/about.jpg） -->
+  <!-- 关于（图片放 images/thumbs/mood/14.webp） -->
   <section class="section" id="about">
     <div class="container about reveal">
       <div class="about__photo">
-        <img src="images/about.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-about/700/875'" alt="摄影师" loading="lazy">
+        <img src="images/thumbs/mood/14.webp" alt="孤雪的摄影作品：镜头与光影" loading="lazy">
       </div>
       <div class="about__body">
         <h3>孤雪</h3>
@@ -115,21 +113,13 @@
       <p class="section__desc">约拍、合作或只是想聊聊光线，都可以找到我。</p>
       <div class="contact__links">
         <a href="mailto:hello@guxue.photo">hello@guxue.photo</a>
-        <a href="#" target="_blank" rel="noopener">微信 · GuxuePhoto</a>
-        <a href="#" target="_blank" rel="noopener">小红书</a>
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <span class="contact-note">微信 · GuxuePhoto</span>
       </div>
     </div>
   </section>
 
   <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__logo">孤雪摄影</div>
-      <div class="footer__tag">GUXUE PHOTOGRAPHY</div>
-      <div class="footer__copy">© 2026 孤雪摄影 · 保留所有权利</div>
-    </div>
-  </footer>
+  <footer class="footer"><div class="container footer__inner"><div><div class="footer__logo">孤雪摄影</div><div class="footer__tag">A QUIET WAY OF SEEING.</div></div><a class="footer__contact" href="#contact">让下一次相遇，发生 <span>↗</span></a><div class="footer__copy">© 2026 孤雪摄影<br>所有影像，皆为时光的注脚。</div></div></footer>
 
   <script src="js/main.js"></script>
 </body>

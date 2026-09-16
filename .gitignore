@@ -1,6 +1,10 @@
 # WorkBuddy 项目内部数据，不属于网站内容，不纳入部署
 .workbuddy/
 
+# WorkBuddy 一键发布的临时产物，不纳入源码仓库
+__publish/
+*.genie
+
 # 系统/编辑器临时文件
 .DS_Store
 Thumbs.db

@@ -3,76 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>作品 · 孤雪摄影 | Guxue Photography</title>
-  <meta name="description" content="孤雪摄影作品集 — 心情、风景、旅行、夜景分类浏览。">
-  <meta property="og:title" content="作品 · 孤雪摄影">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#1A1A1A">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <title>影像集 · 孤雪摄影 | Guxue Photography</title>
+  <meta name="description" content="孤雪的个人影像集。在心情、山野、旅途与夜色之间，收藏值得停留的瞬间。">
+  <meta name="theme-color" content="#f6f4ef">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-  <!-- 导航 -->
+<body class="gallery-page">
+  <a class="skip-link" href="#galleryGrid">跳至摄影作品</a>
   <header class="nav is-scrolled" id="nav">
     <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">孤雪<span>摄影</span></a>
-      <nav class="nav__links">
-        <a href="index.html#home">首页</a>
-        <a href="gallery.html">作品</a>
-        <a href="index.html#about">关于</a>
-        <a href="index.html#contact">联系</a>
+      <a href="index.html" class="nav__logo">孤雪<span>摄影</span><small>GUXUE PHOTOGRAPHY</small></a>
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
+        <a href="index.html">首页</a><a href="gallery.html" aria-current="page">作品</a><a href="index.html#about">关于</a><a href="index.html#contact">联系 <span aria-hidden="true">↗</span></a>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="菜单">☰</button>
+      <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-controls="navLinks" aria-expanded="false">☰</button>
     </div>
   </header>
-
-  <!-- 页头（背景复用 images/hero/1.jpg，也可单独放 images/page-hero.jpg） -->
-  <section class="page-hero">
-    <img class="page-hero__bg" src="images/hero/1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/guxue-pagehero/1920/900'" alt="">
-    <div class="page-hero__inner">
-      <h1>作品集</h1>
-      <p>Portfolio · 心情 / 风景 / 旅行 / 夜景</p>
-    </div>
-  </section>
-
-  <!-- 作品 -->
-  <section class="section">
-    <div class="container">
-      <div class="filters">
-        <button class="filter-btn is-active" data-filter="all">全部</button>
-        <button class="filter-btn" data-filter="mood">心情</button>
-        <button class="filter-btn" data-filter="landscape">风景</button>
-        <button class="filter-btn" data-filter="travel">旅行</button>
-        <button class="filter-btn" data-filter="night">夜景</button>
+  <main id="main">
+    <section class="portfolio-intro container">
+      <div>
+        <p class="eyebrow"><span></span> THE PHOTOGRAPHIC JOURNAL</p>
+        <h1>在光影里，<br>与世界<span class="title-poem">慢慢相遇。</span></h1>
       </div>
-
-      <!-- 作品条目由 js/main.js 根据 images/ 下各分类实际照片自动生成：
-           命名规则 images/<分类>/1.jpg、2.jpg … 连续编号即可，放入即显示，无需改代码 -->
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </div>
-  </section>
-
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__logo">孤雪摄影</div>
-      <div class="footer__tag">GUXUE PHOTOGRAPHY</div>
-      <div class="footer__copy">© 2026 孤雪摄影 · 保留所有权利</div>
-    </div>
-  </footer>
-
-  <!-- 灯箱 -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-    <button class="lightbox__close" id="lightboxClose" aria-label="关闭">✕</button>
-    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="上一张">‹</button>
-    <img id="lightboxImg" src="" alt="">
-    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="下一张">›</button>
-    <div class="lightbox__caption" id="lightboxCaption"></div>
+      <div class="portfolio-intro__note"><span class="note-index">01 — 04 / COLLECTIONS</span><p>一些走过的远方，一些平凡的日常。<br>把时间留给凝望，把故事交给照片。</p><a href="#works">向下，走进影像 <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section class="portfolio-works container" id="works" aria-label="摄影作品">
+      <div class="gallery-toolbar">
+        <div class="filters" aria-label="按系列筛选">
+          <button class="filter-btn is-active" data-filter="all" aria-pressed="true">全部 <sup></sup></button>
+          <button class="filter-btn" data-filter="mood" aria-pressed="false">心情 <sup></sup></button>
+          <button class="filter-btn" data-filter="landscape" aria-pressed="false">风景 <sup></sup></button>
+          <button class="filter-btn" data-filter="travel" aria-pressed="false">旅行 <sup></sup></button>
+          <button class="filter-btn" data-filter="night" aria-pressed="false">夜景 <sup></sup></button>
+        </div>
+        <p class="gallery-count" id="galleryCount" role="status" aria-live="polite">正在整理影像…</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid" tabindex="-1"></div>
+      <noscript><p>请启用 JavaScript 浏览影像集。</p></noscript>
+      <div class="gallery-end"><span>光影有尽，故事未完。</span><a href="#main">回到开篇 ↑</a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer__inner"><div><div class="footer__logo">孤雪摄影</div><div class="footer__tag">A QUIET WAY OF SEEING.</div></div><a class="footer__contact" href="index.html#contact">让下一次相遇，发生 <span>↗</span></a><div class="footer__copy">© 2026 孤雪摄影<br>所有影像，皆为时光的注脚。</div></div></footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="沉浸式照片查看器" aria-hidden="true" tabindex="-1">
+    <div class="lightbox__top"><span class="lightbox__brand">孤雪 <small> / VIEWING ROOM</small></span><div class="lightbox__tools"><button id="lightboxZoom" aria-label="放大照片" aria-pressed="false">放大 ＋</button><button class="lightbox__close" id="lightboxClose" aria-label="关闭照片查看器">关闭 <span>×</span></button></div></div>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev" aria-label="上一张">←</button>
+    <div class="lightbox__stage" id="lightboxStage"><img id="lightboxImg" alt="" draggable="false"><p class="lightbox__status" id="lightboxStatus" role="status"></p></div>
+    <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext" aria-label="下一张">→</button>
+    <div class="lightbox__bottom"><div><p id="lightboxSeries" class="eyebrow"></p><p class="lightbox__caption" id="lightboxCaption"></p></div><p id="lightboxCounter" aria-live="polite"></p><p class="lightbox__hint">← → 切换 · ESC 关闭<span>左右轻扫，继续观看</span></p></div>
+    <div class="lightbox__progress" id="lightboxProgress"></div>
   </div>
-
+  <script src="js/photos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
