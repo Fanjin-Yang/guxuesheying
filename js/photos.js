@@ -181,6 +181,16 @@ window.GUXUE_PHOTOS = [
     "height": 960
   },
   {
+    "id": "mood-19",
+    "category": "mood",
+    "label": "心情",
+    "title": "心情 · 19",
+    "src": "images/mood/19.jpg",
+    "thumb": "images/thumbs/mood/19.webp",
+    "width": 1279,
+    "height": 1706
+  },
+  {
     "id": "landscape-1",
     "category": "landscape",
     "label": "风景",
@@ -417,8 +427,18 @@ window.GUXUE_PHOTOS = [
     "title": "风景 · 24",
     "src": "images/landscape/24.jpg",
     "thumb": "images/thumbs/landscape/24.webp",
-    "width": 1800,
-    "height": 194
+    "width": 2275,
+    "height": 1279
+  },
+  {
+    "id": "landscape-25",
+    "category": "landscape",
+    "label": "风景",
+    "title": "风景 · 25",
+    "src": "images/landscape/25.jpg",
+    "thumb": "images/thumbs/landscape/25.webp",
+    "width": 1280,
+    "height": 960
   },
   {
     "id": "travel-1",
@@ -829,5 +849,25 @@ window.GUXUE_PHOTOS = [
     "thumb": "images/thumbs/night/11.webp",
     "width": 1279,
     "height": 2275
+  },
+  {
+    "id": "night-12",
+    "category": "night",
+    "label": "夜景",
+    "title": "夜景 · 12",
+    "src": "images/night/12.jpg",
+    "thumb": "images/thumbs/night/12.webp",
+    "width": 706,
+    "height": 1140
+  },
+  {
+    "id": "night-13",
+    "category": "night",
+    "label": "夜景",
+    "title": "夜景 · 13",
+    "src": "images/night/13.jpg",
+    "thumb": "images/thumbs/night/13.webp",
+    "width": 1920,
+    "height": 1080
   }
 ];
